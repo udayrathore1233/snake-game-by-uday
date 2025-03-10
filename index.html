@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        canvas {
+            border: 2px solid black;
+            display: none;
+        }
+        #menu {
+            margin-top: 20px;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        #scoreBoard {
+            display: none;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        #controls {
+            display: none;
+            margin-top: 10px;
+        }
+        .control-btn {
+            font-size: 24px;
+            width: 60px;
+            height: 60px;
+            margin: 5px;
+            background: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Snake Game</h1>
+
+ <!-- Start Menu -->
+ <div id="menu">
+    <p>Tap "Start Game" to begin!</p>
+    <button onclick="startGame()">▶ Start Game</button>
+    <button id="udayBtn">💻 Code with Uday</button>
+    <p id="udayMessage" style="display: none; font-weight: bold; color: yellow; margin-top: 10px;">padh le!</p>
+</div>
+ 
+
+    <!-- Scoreboard -->
+    <div id="scoreBoard">Score: <span id="score">0</span></div>
+
+    <!-- Game Canvas -->
+    <canvas id="gameCanvas"></canvas>
+
+    <script src="script.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+
+
+
+</body>
+</html>
